@@ -60,7 +60,6 @@ function jumble_and_guess(){
 
 
     document.getElementById("random_area").classList.remove("hidden")
-    document.getElementById("random_area").classList.add("show")
 
     //change the button text
     document.getElementById("button").innerText="Submit"
