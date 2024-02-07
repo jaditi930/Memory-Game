@@ -22,7 +22,7 @@ fetch("https://dummyjson.com/products/categories")
     for(let i=0;i<12;i++)
     {
         words[i]=data[i].replace("-"," ")
-        document.getElementById(`word-${i}`).children[1].innerText=`${i}. ${words[i]}`
+        document.getElementById(`word-${i}`).children[1].innerText=`${i+1}. ${words[i]}`
 
     }
     console.log(words)
@@ -38,7 +38,7 @@ const shuffle = (array) => {
 function jumble_and_guess(){
 
     //jumble words
-    new_words=words;
+    new_words=[...words];
     shuffle(new_words)
 
     for(let i=0;i<12;i++)
@@ -47,7 +47,7 @@ function jumble_and_guess(){
 
     }
 
-    let random_choices=[0,1,2,3,4,5,6,7,8,9,10,11]
+    let random_choices=[1,2,3,4,5,6,7,8,9,10,11,12]
     shuffle(random_choices)
     
     //guess words at these indexes
@@ -57,12 +57,14 @@ function jumble_and_guess(){
        document.getElementById(`index-${i}`).innerText=`${random_indexes[i]}th Word`
 
     }
+    console.log(random_indexes)
 
 
     document.getElementById("random_area").classList.remove("hidden")
 
     //change the button text
-    document.getElementById("button").innerText="Submit"
+    document.getElementById("button").classList.add("hidden")
+    document.getElementById("submit").classList.add("show")
 
     //attach event listeners to all words
     for(let i=0;i<12;i++)
@@ -129,6 +131,21 @@ function remove_word(e,i){
     document.getElementById(`cross-${i}`).classList.add("hidden")
     document.getElementById(`cross-${i}`).classList.remove("show")
 
+}
+
+function get_score(){
+
+    // calculate score
+
+    let score=0;
+    for(let i=0;i<selected_words.length;i++){
+
+        if(selected_words[i]==words[random_indexes[i]-1])
+        score+=5
+    }
+
+    // show score on screen
+    document.getElementById("score").innerText=`Score : ${score}/15`
 }
 
 

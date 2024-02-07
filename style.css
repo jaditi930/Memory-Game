@@ -67,7 +67,7 @@ body{
 .show{
     display: block;
 }
-#button{
+.btn{
     margin-left: auto;
     padding: 10px;
     border-radius:5px;
