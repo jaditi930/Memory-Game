@@ -53,10 +53,10 @@ body{
     padding: 0 5px;
 }
 .hidden{
-    display:none;
+    visibility: hidden;
 }
 .show{
-    display: flex;
+    visibility: visible;
 }
 #button{
     margin-left: auto;
