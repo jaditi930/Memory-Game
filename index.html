@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Memory Game</title>
+</head>
+<body onload="fetch_words()">
+    <div id="main">
+        <h1>Word Seed</h1>
+
+        <div class="row hidden" id="random_area">
+            <div class="words">
+                <span id="index-0"></span>
+            </div>
+
+            <div class="words">
+                <span id="index-1"></span>
+            </div>
+
+            <div class="words">
+                <span id="index-2"></span>
+            </div>
+        </div>
+
+        <div class="words_area">
+            <div class="row">
+
+                <div class="words" id="word-0">
+                    <div class="hidden cross" id="cross-0">x</div>
+                    <span></span>
+                </div>
+
+                <div class="words" id="word-1">
+                    <div class="hidden cross" id="cross-1">x</div>
+                    <span></span>
+                </div>
+
+                <div class="words" id="word-2">
+                    <div class="hidden cross" id="cross-2">x</div>
+                    <span ></span>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="words" id="word-3">
+                    <div class="hidden cross" id="cross-3">x</div>
+                    <span></span>
+                </div>
+
+                <div class="words" id="word-4">
+                    <div class="hidden cross" id="cross-4">x</div>
+                    <span></span>
+                </div>
+
+                <div class="words" id="word-5">
+                    <div class="hidden cross" id="cross-5">x</div>
+                    <span></span>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="words" id="word-6">
+                    <div class="hidden cross" id="cross-6">x</div>
+                    <span></span>
+                </div>
+
+                <div class="words" id="word-7">
+                    <div class="hidden cross" id="cross-7">x</div>
+                    <span></span>
+                </div>
+
+                <div class="words" id="word-8">
+                    <div class="hidden cross" id="cross-8">x</div>
+                    <span></span>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="words" id="word-9">
+                    <div class="hidden cross" id="cross-9">x</div>
+                    <span></span>
+                </div>
+
+                <div class="words" id="word-10">
+                    <div class="hidden cross" id="cross-10">x</div>
+                    <span></span>
+                </div>
+
+                <div class="words" id="word-11">
+                    <div class="hidden cross" id="cross-11">x</div>
+                    <span></span>
+                </div>
+
+            </div>
+        </div>
+
+        <button id="button" onclick="jumble_and_guess()">Jumble and Guess</button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
