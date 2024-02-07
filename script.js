@@ -98,8 +98,6 @@ function add_word(e,i){
     console.log(selected_words)
     select_count++;
 
-    //remove listener
-    // e.target.removeEventListener("click",add_word)
 }
 
 function remove_word(e,i){
@@ -131,9 +129,6 @@ function remove_word(e,i){
 
     document.getElementById(`cross-${i}`).classList.add("hidden")
     document.getElementById(`cross-${i}`).classList.remove("show")
-
-    // add listener
-    e.target.parentElement.addEventListener("click",add_word)
 
 }
 
