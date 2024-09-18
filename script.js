@@ -21,7 +21,7 @@ fetch("https://dummyjson.com/products/categories")
 {
     for(let i=0;i<12;i++)
     {
-        words[i]=data[i].replace("-"," ")
+        words[i]=data[i].name;
         document.getElementById(`word-${i}`).children[1].innerText=`${i+1}. ${words[i]}`
 
     }
